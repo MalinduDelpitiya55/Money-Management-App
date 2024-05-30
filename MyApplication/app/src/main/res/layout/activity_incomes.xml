@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".Incomes">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grading_background_blue"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="20dp"
+                android:text="@string/expences"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toTopOf="@id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="dd-MM-yyyy">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/date_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_background"
+                        android:inputType="datetime|date"
+                        app:errorEnabled="true"
+                        app:helperText="dd-MM-yyyy"
+                        app:helperTextEnabled="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amountInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/enter_amount_string">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="16sp"
+                        android:background="@drawable/border_background"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:outlineProvider="@color/black"
+                    android:background="@drawable/border_background">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/select_type"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_income"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/incomestring"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/radio_outcome"
+                            android:layout_width="107dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/expences" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/descriptionOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/description_string">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textLongMessage"
+                        android:background="@drawable/border_background"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Submit" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grading_background_blue"
+            android:baselineAligned="true"
+            android:gravity="fill_horizontal"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="NotSibling">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/home_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_background"
+                    android:src="@drawable/bottom_btn1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/income_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/income_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="86dp"
+                    android:background="@drawable/button_background"
+                    android:src="@drawable/btn1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/expences_btn_outcome"
+                    app:layout_constraintStart_toEndOf="@+id/home_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/history_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="43dp"
+                    android:background="@drawable/button_background"
+                    android:src="@drawable/btn3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/expences_btn_outcome"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/expences_btn_outcome"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="58dp"
+                    android:background="@drawable/button_background"
+                    android:src="@drawable/expense"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/history_btn"
+                    app:layout_constraintStart_toEndOf="@+id/income_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

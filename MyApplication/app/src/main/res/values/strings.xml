@@ -1,0 +1,64 @@
+<resources>
+
+
+    <string name="Hello_User">Hello </string>
+    <string name="Hello_Name">Name </string>
+    <string name="app_name">Money Solve</string>
+    <string name="total_balanceTXT">Total Balance</string>
+    <string name="total_balance">$5400.00</string>
+    <string name="incomestring">Income</string>
+    <string name="todo">To Do</string>
+    <string name="expences">Expences</string>
+    <string name="transactions">Transactions</string>
+    <string name="history">History</string>
+    <string name="transfactionHistory1">House Rent</string>
+    <string name="transfactionamount1">500.00$</string>
+    <string name="transfactionHistory2">Transport</string>
+    <string name="transfactionamount2">$90.00</string>
+    <string name="transfactionamount3">$3200.00</string>
+    <string name="transfactionHistory3">Freelance</string>
+    <string name="card_Number">2343 5345 6543 6237</string>
+    <string name="name_String">Name</string>
+    <string name="Card_Holder_Name">Malindu Delpitiya</string>
+    <string name="date_String">Date</string>
+    <string name="Exp_Date">24/23</string>
+    <string name="income_sourse">Income Sourse</string>
+    <string name="enter_amount_string">Enter Amount</string>
+    <string name="select_catagory_string">Select Catagory</string>
+    <string name="select_recurring_string">Select Recurring</string>
+    <string name="description_string">Description</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="enter">Enter your Name</string>
+    <string name="password">Enter Your Password</string>
+    <string name="explore">Money Manager</string>
+    <string name="sign_in">Sign In</string>
+    <string name="account">Create Account</string>
+    <string name="sign_up1">Sign Up</string>
+    <string name="do_you_have_an_account_log_in">Do you Have an Account? Log in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="sign_up_here">Sign Up here</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="select_type">Select Type</string>
+    <string name="update">UPDATE</string>
+    <string name="convert">Convert</string>
+    <string name="changeBTN">changeBTN</string>
+    <string-array name="category_options">
+        <item>Income</item>
+        <item>Outcome</item>
+    </string-array>
+    <string name="change_username">Change Username</string>
+    <string name="current_username">Current Username</string>
+    <string name="new_username">New Username</string>
+    <string name="submit">Submit</string>
+    <string name="current_username_error">Please enter your current username.</string>
+    <string name="new_username_error">Please enter a new username.</string>
+    <string name="username_changed_success">Username changed successfully.</string>
+
+</resources>

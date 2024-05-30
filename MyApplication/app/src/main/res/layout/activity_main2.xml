@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="false"
+    android:background="@drawable/grading_background_blue"
+    android:fadeScrollbars="false"
+    app:layout_scrollEffect="compress"
+    app:layout_scrollFlags="scroll"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="44dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/transactions"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp">
+
+                <LinearLayout
+                    android:id="@+id/expences_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_marginTop="44dp"
+                    android:background="@drawable/light_blue_background"
+                    android:backgroundTint="#BFB8B8"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/historyTXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/history"
+                            android:textAlignment="center"
+                            android:textColor="@color/purplr"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <TableLayout
+                            android:id="@+id/tableLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"></TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="73dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="95dp"
+            android:backgroundTint="#FF0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grading_background_blue"
+        android:baselineAligned="true"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expences_btn"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="NotSibling">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/home_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_background"
+                android:src="@drawable/bottom_btn1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/income_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/income_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="86dp"
+                android:background="@drawable/button_background"
+                android:src="@drawable/btn1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/expences_btn_outcome"
+                app:layout_constraintStart_toEndOf="@+id/home_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/history_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/button_background"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/expences_btn_outcome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/expences_btn_outcome"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="58dp"
+                android:background="@drawable/button_background"
+                android:contentDescription="@string/expences"
+                android:src="@drawable/expense"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/history_btn"
+                app:layout_constraintStart_toEndOf="@+id/income_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

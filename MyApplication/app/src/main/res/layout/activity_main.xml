@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="false"
+    android:background="@drawable/grading_background_blue"
+    android:fadeScrollbars="false"
+    app:circularflow_defaultRadius="10dp"
+    app:layout_scrollEffect="compress"
+    app:layout_scrollFlags="scroll"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="44dp"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Hello_User"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/Hello_User"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profile_pic" />
+
+                <TextView
+                    android:id="@+id/username_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/Hello_Name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/Hello_User"
+                    app:layout_constraintStart_toEndOf="@+id/Hello_User"
+                    app:layout_constraintTop_toTopOf="@+id/Hello_User" />
+
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:src="@drawable/profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@drawable/profile"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/total_balance_TXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/total_balanceTXT"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/total_balance"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="37sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:id="@+id/expences_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_marginTop="96dp"
+                    android:background="@drawable/light_blue_background"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_marginEnd="32dp"
+                        android:baselineAligned="true"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25">
+
+
+                            <ImageButton
+                                android:id="@+id/incomeBTN"
+                                android:layout_width="84dp"
+                                android:layout_height="77dp"
+                                android:background="@drawable/button_background"
+                                android:contentDescription="@drawable/btn1"
+                                android:src="@drawable/btn1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/incomeBTN_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/incomestring"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/incomeBTN"
+                                app:layout_constraintStart_toStartOf="@+id/incomeBTN"
+                                app:layout_constraintTop_toBottomOf="@+id/incomeBTN" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25">
+
+                            <ImageButton
+                                android:id="@+id/expenses_btn"
+                                android:layout_width="84dp"
+                                android:layout_height="77dp"
+                                android:background="@drawable/button_background"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/expense"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/expencesbtn_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/expences"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/expenses_btn"
+                                app:layout_constraintStart_toStartOf="@+id/expenses_btn"
+                                app:layout_constraintTop_toBottomOf="@+id/expenses_btn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25">
+
+                            <ImageButton
+                                android:id="@+id/transfaction_btn"
+                                android:layout_width="84dp"
+                                android:layout_height="77dp"
+                                android:background="@drawable/button_background"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/btn3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/transfactionbtn_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/transactions"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/transfaction_btn"
+                                app:layout_constraintStart_toStartOf="@+id/transfaction_btn"
+                                app:layout_constraintTop_toBottomOf="@+id/transfaction_btn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/history"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TableLayout
+                                android:id="@+id/tableLayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"></TableRow>
+                            </TableLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/credit_card_background"
+                    app:layout_constraintBottom_toTopOf="@+id/expences_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/expences_btn">
+
+
+                    <ImageView
+                        android:id="@+id/mastercard_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="32dp"
+                        android:src="@drawable/mastercard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@drawable/mastercard"
+                        />
+
+                    <ImageView
+                        android:id="@+id/sim_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/sim"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@drawable/sim"/>
+
+                    <TextView
+                        android:id="@+id/card_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_Number"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sim_icon" />
+
+                    <TextView
+                        android:id="@+id/name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/name_String"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/card_number"
+                        app:layout_constraintTop_toBottomOf="@+id/card_number" />
+
+                    <TextView
+                        android:id="@+id/card_holder_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/Card_Holder_Name"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/name_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/name_txt" />
+
+                    <TextView
+                        android:id="@+id/date_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/date_String"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/name_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/card_number" />
+
+                    <TextView
+                        android:id="@+id/exp_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/Exp_Date"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/date_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/date_txt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grading_background_blue"
+        android:baselineAligned="true"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expences_btn"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="NotSibling">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/home_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/income_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/bottom_btn1"
+                />
+
+            <ImageButton
+                android:id="@+id/income_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="86dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/expences_btn_outcome"
+                app:layout_constraintStart_toEndOf="@+id/home_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/btn1"
+                />
+
+            <ImageButton
+                android:id="@+id/history_btn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/button_background"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/btn3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/expences_btn_outcome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/expences_btn_outcome"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="58dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/history_btn"
+                app:layout_constraintStart_toEndOf="@+id/income_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/expense"
+                android:contentDescription="@string/expences"
+                 />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
